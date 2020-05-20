@@ -18,6 +18,8 @@ public class TokenAuthenticationService {
     static final String TOKEN_PREFIX = "Bearer";
     static final Key SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS512);
 
+
+
     static void addAuthentication(HttpServletResponse res, String username) {
         String JWT = Jwts.builder()
                 .setSubject(username)
